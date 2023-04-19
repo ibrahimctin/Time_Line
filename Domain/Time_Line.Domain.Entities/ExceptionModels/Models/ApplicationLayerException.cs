@@ -1,10 +1,11 @@
-﻿namespace Time_Line.Domain.Enitities.ExceptionModels.Models
+﻿namespace Time_Line.Domain.Entities.ExceptionModels.Models
 {
-    public class ApplicationLayerException:Exception
+    public abstract class ApplicationLayerException:Exception
     {
-        public ApplicationLayerException(string message):base(message)
-        {
+        protected ApplicationLayerException(string title, string message)
+            : base(message) =>
+            Title = title;
 
-        }
+        public string Title { get; }
     }
 }

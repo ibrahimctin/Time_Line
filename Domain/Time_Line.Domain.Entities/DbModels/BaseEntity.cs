@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.DbModels
+﻿namespace Time_Line.Domain.Entities.DbModels.Identity
 {
     public abstract class BaseEntity
     {

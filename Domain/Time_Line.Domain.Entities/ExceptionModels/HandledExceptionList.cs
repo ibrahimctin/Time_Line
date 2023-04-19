@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.ExceptionModels
+﻿namespace Time_Line.Domain.Entities.ExceptionModels
 {
     public class HandledExceptionList : Exception
     {

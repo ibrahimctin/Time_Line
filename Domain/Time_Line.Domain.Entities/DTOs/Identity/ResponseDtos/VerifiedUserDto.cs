@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.DTOs.Identity.ResponseDtos
+﻿namespace Time_Line.Domain.Entities.DTOs.Identity.ResponseDtos
 {
     public class VerifiedUserDto
     {

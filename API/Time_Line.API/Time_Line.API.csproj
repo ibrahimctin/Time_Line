@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Time_Line.Domain.Application\Time_Line.Domain.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Time_Line.Infrastructure.Identity\Time_Line.Infrastructure.Identity.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Time_Line.Infrastructure\Time_Line.Infrastructure.csproj" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.DbModels.Identity
+﻿namespace Time_Line.Domain.Entities.DbModels.Identity
 {
     public class AppRole:IdentityRole<string>
     {

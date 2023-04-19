@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.ExceptionModels.Models
+﻿namespace Time_Line.Domain.Entities.ExceptionModels.Models
 {
     public class ValidationError
     {

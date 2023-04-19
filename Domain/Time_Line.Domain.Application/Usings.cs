@@ -1,4 +1,11 @@
-﻿global using Time_Line.Domain.Enitities.DbModels.Identity;
-global using Time_Line.Domain.Enitities.DTOs.Identity.ResponseDtos;
-global using Microsoft.AspNetCore.Identity; 
-global using Time_Line.Domain.Enitities.DTOs.Identity.RequestDtos;
+﻿global using Time_Line.Domain.Entities.DbModels.Identity;
+global using Time_Line.Domain.Entities.DTOs.Identity.ResponseDtos;
+global using Microsoft.AspNetCore.Identity;
+global using Time_Line.Domain.Entities.DTOs.Identity.RequestDtos;
+global using MediatR;
+global using FluentValidation;
+global using Time_Line.Domain.Application.Abstraction.Messaging;
+global using ValidationException = Time_Line.Domain.Entities.ExceptionModels.Models.ValidationException;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
+global using Time_Line.Domain.Application.Behaviors;

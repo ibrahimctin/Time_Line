@@ -1,4 +1,4 @@
-﻿namespace Time_Line.Domain.Enitities.DTOs.Identity.RequestDtos
+﻿namespace Time_Line.Domain.Entities.DTOs.Identity.RequestDtos
 {
     public class RegisterDto
     {
