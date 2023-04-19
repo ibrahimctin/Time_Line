@@ -1,4 +1,6 @@
-﻿namespace Time_Line.Infrastructure.Identity.Services
+﻿using MediatR;
+
+namespace Time_Line.Infrastructure.Identity.Services
 {
     public class CurrentUserService:ICurrentUserService
     {
@@ -54,5 +56,6 @@
             // and take return current user Id
             return currentUser is null ? default : currentUser.Id;
         }
+       
     }
 }

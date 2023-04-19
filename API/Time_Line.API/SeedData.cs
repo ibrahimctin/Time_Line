@@ -2,6 +2,7 @@
 {
     public static class SeedData
     {
+        
         public static async Task SeedAsync(WebApplication app)
         {
             await using var scope = app.Services.CreateAsyncScope();

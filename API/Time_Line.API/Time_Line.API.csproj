@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\Infrastructure\Time_Line.Infrastructure\Time_Line.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
