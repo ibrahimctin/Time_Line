@@ -6,6 +6,8 @@
         {
           
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+          
             services.AddTransient(typeof(IPipelineBehavior<,>),
             typeof(ValidationBehavior<,>));
             services.AddScoped(typeof(IPipelineBehavior<,>),

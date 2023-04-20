@@ -27,7 +27,9 @@
         public async Task<ActionResult<LoginCommandResponse>> Login([FromBody] LoginDto loginRequest)
         {
             LoginCommand request = new(loginRequest, GetIpAddress());
+
             var response = await _mediator.Send(request);
+            AttachAuthCookies(response.VerifiedUserDto);
             return Ok(response);
 
         }

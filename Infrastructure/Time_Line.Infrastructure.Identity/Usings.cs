@@ -17,3 +17,7 @@ global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.Extensions.Configuration;
 global using Time_Line.Infrastructure;
 global using System.Security.Cryptography;
+global using Microsoft.Extensions.DependencyInjection.Extensions;
+global using Time_Line.Infrastructure.Identity.Services;
+
+

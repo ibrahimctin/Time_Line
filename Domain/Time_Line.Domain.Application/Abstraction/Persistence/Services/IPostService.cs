@@ -2,6 +2,9 @@
 {
     public interface IPostService
     {
-        
+        Task<string> CreatePostAsync(PostCreateCommand postCreateCommand);
+        Task<PostDetailResponse> GetPostDetailAsync(string postId);
+        Task<string> UpdatePostAsync(PostUpdateCommand postUpdateCommand);
+        Task<bool> DeletePostAsync(PostDeleteCommand postDeleteCommand);
     }
 }

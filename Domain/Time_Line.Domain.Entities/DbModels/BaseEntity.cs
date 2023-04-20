@@ -2,6 +2,7 @@
 {
     public abstract class BaseEntity
     {
+        [Key]
         public string Id { get; set; }
     }
 }

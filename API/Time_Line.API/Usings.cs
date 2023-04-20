@@ -21,3 +21,8 @@ global using Time_Line.Domain.Application.Features.Identity.Commands.AppUsers.De
 global using Time_Line.Domain.Entities.DTOs.Identity.RequestDtos;
 global using Time_Line.Domain.Entities.DTOs.Identity.ResponseDtos;
 global using Time_Line.Domain.Application.Abstraction.Identity;
+global using Time_Line.Domain.Application.Features.Posts.Commands.CreatePost;
+global using Time_Line.Domain.Application.Features.Posts.Commands.DeletePost;
+global using Time_Line.Domain.Application.Features.Posts.Commands.UpdatePost;
+global using Time_Line.Persistence;
+global using Time_Line.Domain.Application.Features.Posts.Queries.GetPostDetail;

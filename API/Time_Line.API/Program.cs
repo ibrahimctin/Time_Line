@@ -1,8 +1,10 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 /// Identity Layer Configurations
 builder.Services.LoadIdentityConf();
 builder.Services.LoadIdentityServices();
@@ -11,7 +13,8 @@ builder.Services.LoadJwtConf(builder.Configuration);
 builder.Services.LoadInfrastructureConf(builder.Configuration);
 /// Application Layer Configuration
 builder.Services.LoadApplicationServicesConf();
-///////////////////////////////////////////
+/// Persistence Layer Configuration
+builder.Services.LoadPersistenceServicesConf();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
@@ -28,11 +31,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseCookiePolicy();
 app.MapControllers();
+
 
 app.Run();

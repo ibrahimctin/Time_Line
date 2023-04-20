@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace Time_Line.Infrastructure.Identity.Services
+﻿namespace Time_Line.Infrastructure.Identity.Services
 {
     public class CurrentUserService:ICurrentUserService
     {
@@ -20,7 +18,7 @@ namespace Time_Line.Infrastructure.Identity.Services
         {
 
             // Take user from context "Curren User"
-            var user = _httpContextAccessor.HttpContext.User;
+            var user =  _httpContextAccessor.HttpContext.User;
 
             // Validate
 

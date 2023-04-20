@@ -5,6 +5,6 @@
         public string Title { get; set; }
         public string ContentBody { get; set; }
         public AppUser? AppUser { get; set; }
-        public string UserId { get; set; }
+        public string? UserId { get; set; }
     }
 }

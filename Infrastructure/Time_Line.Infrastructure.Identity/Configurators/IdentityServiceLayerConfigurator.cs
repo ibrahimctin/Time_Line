@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Time_Line.Infrastructure.Identity.Services;
-
-namespace QualificationExam.Identity.Configurators
+﻿namespace QualificationExam.Identity.Configurators
 {
     public static class IdentityServiceLayerConfigurator
     {
@@ -13,7 +9,6 @@ namespace QualificationExam.Identity.Configurators
             services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<IRefreshTokenService, RefreshTokenService>();
-        
             return services;
         }
 
