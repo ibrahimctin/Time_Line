@@ -38,27 +38,27 @@
             return Ok(response);
         }
         [HttpPost("[action]")]
-        public async Task<ActionResult<ChangeUserNameCommandResponse>> ChangeUserName([FromBody] string userName,string password)
+        public async Task<ActionResult<ChangeUserNameCommandResponse>> ChangeUserName(string userName,string password)
         {
             ChangeUserNameCommand request = new(userName, password);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
         [HttpPost("[action]")]
-        public async Task<ActionResult<ChangePasswordCommandResponse>> ChangePassword([FromBody] string currPassword, string newPassword)
+        public async Task<ActionResult<ChangePasswordCommandResponse>> ChangePassword( string currPassword, string newPassword)
         {
             ChangePasswordCommand request = new(currPassword, newPassword);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
         [HttpPost("[action]")]
-        public async Task<ActionResult<ChangeEmailCommandResponse>> ChangeEmail([FromBody] string userName, string password)
+        public async Task<ActionResult<ChangeEmailCommandResponse>> ChangeEmail( string userName, string password)
         {
             ChangeEmailCommand request = new(userName, password);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
-
+        [HttpPost("[action]")]
         public async Task<IActionResult> Logout()
         {
             var refreshToken = Request.Cookies[CookieNames.REFRESH_TOKEN];
@@ -71,6 +71,7 @@
 
             return Ok();
         }
+        [HttpPost("[action]")]
 
         public async Task<IActionResult> RevokeToken([FromBody] string bodyToken)
         {
@@ -80,6 +81,7 @@
 
             return Ok();
         }
+        [HttpPost("[action]")]
         public async Task<IActionResult> RefreshToken()
         {
             var refreshToken = Request.Cookies[CookieNames.REFRESH_TOKEN];

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.Domain.Application", "Domain\Time_Line.Domain.Application\Time_Line.Domain.Application.csproj", "{DD216A50-3920-49B9-BF0A-D2C6019D56B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time_Line.Domain.Application", "Domain\Time_Line.Domain.Application\Time_Line.Domain.Application.csproj", "{DD216A50-3920-49B9-BF0A-D2C6019D56B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.Domain.Entities", "Domain\Time_Line.Domain.Entities\Time_Line.Domain.Entities.csproj", "{8FECDC44-41ED-4A41-9571-3E282A8E511F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time_Line.Domain.Entities", "Domain\Time_Line.Domain.Entities\Time_Line.Domain.Entities.csproj", "{8FECDC44-41ED-4A41-9571-3E282A8E511F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.Infrastructure.Identity", "Infrastructure\Time_Line.Infrastructure.Identity\Time_Line.Infrastructure.Identity.csproj", "{88676AFC-4D7B-4181-BE37-464943840680}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time_Line.Infrastructure.Identity", "Infrastructure\Time_Line.Infrastructure.Identity\Time_Line.Infrastructure.Identity.csproj", "{88676AFC-4D7B-4181-BE37-464943840680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.API", "API\Time_Line.API\Time_Line.API.csproj", "{9BA9F3CB-F37C-4811-B6A8-AF3A59F77F06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time_Line.API", "API\Time_Line.API\Time_Line.API.csproj", "{9BA9F3CB-F37C-4811-B6A8-AF3A59F77F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.Infrastructure", "Infrastructure\Time_Line.Infrastructure\Time_Line.Infrastructure.csproj", "{A53B7EDE-6868-4E02-84CE-EB155E24E9C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Time_Line.Infrastructure", "Infrastructure\Time_Line.Infrastructure\Time_Line.Infrastructure.csproj", "{A53B7EDE-6868-4E02-84CE-EB155E24E9C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Line.Persistence", "Infrastructure\Time_Line.Persistence\Time_Line.Persistence.csproj", "{A710536D-700B-46B9-94ED-BACD0C50BE17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A53B7EDE-6868-4E02-84CE-EB155E24E9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A53B7EDE-6868-4E02-84CE-EB155E24E9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A53B7EDE-6868-4E02-84CE-EB155E24E9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A710536D-700B-46B9-94ED-BACD0C50BE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A710536D-700B-46B9-94ED-BACD0C50BE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A710536D-700B-46B9-94ED-BACD0C50BE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A710536D-700B-46B9-94ED-BACD0C50BE17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

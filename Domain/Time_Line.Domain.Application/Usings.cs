@@ -10,4 +10,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using System.Reflection;
 global using Time_Line.Domain.Application.Behaviors;
 global using Time_Line.Domain.Application.Abstraction.Identity;
-global using Time_Line.Domain.Application.Features.Identity.Commands.Accounts.ChangeUsername;
+global using Time_Line.Domain.Application.Features.Identity.Commands.Accounts.ChangeUsername; 
+global using Microsoft.EntityFrameworkCore;
+global using Time_Line.Domain.Entities.DbModels;
+global using System.Linq.Expressions;
