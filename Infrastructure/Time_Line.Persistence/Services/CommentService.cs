@@ -27,6 +27,8 @@
             var commentPayload = _mapper.Map<CommentDetailResponse>(commentResult);
             return commentPayload;
         }
+
+
         public async Task<string> CreateCommentAsync(CommentCreateCommand commentCreateCommand)
         {
             var commentResult = _mapper.Map<Comment>(commentCreateCommand.CommentCreateRequest);
@@ -38,6 +40,8 @@
 
 
         }
+
+
         public async Task<string> UpdateCommentAsync(CommentUpdateCommand commentUpdateCommand)
         {
             var commentResult = await GetCommentIfCommentExists(commentUpdateCommand.CommentUpdateRequest.Id);
