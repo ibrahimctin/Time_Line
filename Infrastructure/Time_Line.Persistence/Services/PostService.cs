@@ -70,6 +70,12 @@
         }
         #endregion
 
+        public async Task<ICollection<PostCommentListResponse>> GetPostCommentsAsync(string commentId)
+        {
+            var postCommentsResult = await _postReadRepository.GetPostCommentsAsync(commentId);
+            var postCommentsPayload = _mapper.Map<ICollection<PostCommentListResponse>>(postCommentsResult);
+            return postCommentsPayload;
+        }
 
 
         #region Private Methods
@@ -88,7 +94,8 @@
             return result;
         }
 
-       
+  
+
 
         #endregion
     }

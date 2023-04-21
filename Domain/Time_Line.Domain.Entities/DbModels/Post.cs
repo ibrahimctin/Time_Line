@@ -6,5 +6,7 @@
         public string ContentBody { get; set; }
         public AppUser? AppUser { get; set; }
         public string? UserId { get; set; }
+        public ICollection<Comment>? Comments { get; set; }
+        public string?  CommentId { get; set; }
     }
 }

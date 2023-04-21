@@ -33,6 +33,14 @@
             return Ok(response);
         }
 
+        [HttpGet("[action]/{id}")]
+        public async Task<ActionResult<GetPostCommnetsListQueryResponse>> GetPostComments(string commentId)
+        {
+            var request = new GetPostCommnetsListQuery(commentId);
+            var response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
 
         [HttpPut("[action]")]
         public async Task<ActionResult<PostUpdateCommand>> UpdatePost([FromBody] PostUpdateCommand request)
