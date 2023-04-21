@@ -10,6 +10,9 @@
               typeof(WriteRepository<>));
             services.AddScoped<IPostReadRepository, PostReadRepository>();
             services.AddScoped<IPostWriteRepository, PostWriteRepository>();
+            services.AddScoped<ICommentWriteRepository, CommentWriteRepository>();
+            services.AddScoped<ICommentReadRepository, CommentReadRepository>();
+            services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IPostService, PostService>();
             return services;
         }

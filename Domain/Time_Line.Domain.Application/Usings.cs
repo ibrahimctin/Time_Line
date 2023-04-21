@@ -22,5 +22,16 @@ global using Time_Line.Domain.Application.Features.Posts.Queries.GetPostDetail;
 global using Time_Line.Domain.Application.Features.Posts.Commands.UpdatePost;
 global using Time_Line.Domain.Application.Features.Posts.Commands.DeletePost;
 global using Time_Line.Domain.Application.Abstraction.Persistence.Services;
+global using Time_Line.Domain.Entities.DTOs.Comment.RequestDtos;
+global using Time_Line.Domain.Application.Features.Comments.Commands.CreateComment;
+global using Time_Line.Domain.Application.Features.Comments.Commands.DeleteComment;
+global using Time_Line.Domain.Application.Features.Comments.Commands.UpdateComment;
+global using Time_Line.Domain.Entities.DTOs.Comment.ResponseDtos;
+
+
+
+
+
+
 
 

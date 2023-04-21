@@ -13,7 +13,7 @@
             IMapper mapper,
             ICurrentUserService currUserService,
             IPostReadRepository postReadRepository,
-            IPostWriteRepository postWriteRepository,
+            IPostWriteRepository postWriteRepository
            )
         {
             _mapper = mapper;

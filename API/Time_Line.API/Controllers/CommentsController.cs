@@ -2,40 +2,40 @@
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostsController : ControllerBase
+    public class CommentsController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public PostsController(IMediator mediator)
+        public CommentsController(IMediator mediator)
         {
             _mediator = mediator;
         }
         [HttpPost("[action]")]
-        public async Task<ActionResult<PostCreateCommandResponse>> CreatePost([FromBody] PostCreateCommand request)
+        public async Task<ActionResult<CommentCreateCommandResponse>> CreateComment([FromBody] CommentCreateCommand request)
         {
             var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpDelete("[action]/{id}")]
-        public async Task<ActionResult<PostDeleteCommandResponse>> DeletePost(string id)
+        public async Task<ActionResult<CommentDeleteCommandResponse>> DeletePost(string id)
         {
-            var request = new PostDeleteCommand(id);
+            var request = new CommentDeleteCommand(id);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpGet("[action]/{id}")]
-        public async Task<ActionResult<GetPostDetailQueryResponse>> GetPostDetail(string id)
+        public async Task<ActionResult<GetCommentDetailQueryResponse>> GetCommentDetail(string id)
         {
-            var request = new GetPostDetailQuery(id);
+            var request = new GetCommentDetailQuery(id);
             var response = await _mediator.Send(request);
             return Ok(response);
         }
 
 
         [HttpPut("[action]")]
-        public async Task<ActionResult<PostUpdateCommand>> UpdatePost([FromBody] PostUpdateCommand request)
+        public async Task<ActionResult<CommentUpdateCommandResponse>> UpdatePost([FromBody] CommentUpdateCommand request)
         {
             var response = await _mediator.Send(request);
             return Ok(response);

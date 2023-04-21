@@ -19,3 +19,10 @@ global using Time_Line.Persistence.Repositories.Posts;
 global using Time_Line.Persistence.Services;
 global using Microsoft.AspNetCore.Http;
 global using Time_Line.Domain.Entities.DTOs.Posts.ResponseDtos;
+global using Time_Line.Domain.Application.Abstraction.Persistence.Repositories.Comments;
+global using Time_Line.Persistence.Repositories.Comments;
+global using Time_Line.Domain.Application.Features.Comments.Commands.CreateComment;
+global using Time_Line.Domain.Application.Features.Comments.Commands.DeleteComment;
+global using Time_Line.Domain.Application.Features.Comments.Commands.UpdateComment;
+global using Time_Line.Domain.Entities.DTOs.Comment.ResponseDtos;
+
