@@ -4,7 +4,7 @@
     {
         Task<string> CreatePostAsync(PostCreateCommand postCreateCommand);
         Task<PostDetailResponse> GetPostDetailAsync(string postId);
-        Task<ICollection<PostCommentListResponse>>GetPostCommentsAsync(string commentId);
+        Task<ICollection<PostCommentListResponse>>GetPostCommentsAsync(string postId);
         Task<string> UpdatePostAsync(PostUpdateCommand postUpdateCommand);
         Task<bool> DeletePostAsync(PostDeleteCommand postDeleteCommand);
     }

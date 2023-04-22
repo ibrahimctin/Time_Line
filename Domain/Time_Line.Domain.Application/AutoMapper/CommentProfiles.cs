@@ -10,6 +10,9 @@
                 .ReverseMap();
             CreateMap<Comment, CommentUpdateRequest>()
                 .ReverseMap();
+            CreateMap<Comment, CommentSubCommentsListResposne>()
+             .ForMember(src => src.SubCommentDetailResponse,
+             src => src.MapFrom(dest => dest.SubComments));
         }
     }
 }

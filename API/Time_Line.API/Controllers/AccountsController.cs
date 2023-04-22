@@ -1,4 +1,5 @@
-﻿namespace Time_Line.API.Controllers
+﻿
+namespace Time_Line.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -9,7 +10,7 @@
 
         public AccountsController(
             IMediator mediator
-            , IRefreshTokenService refreshTokenService = null)
+            , IRefreshTokenService refreshTokenService )
         {
             _mediator = mediator;
             _refreshTokenService = refreshTokenService;

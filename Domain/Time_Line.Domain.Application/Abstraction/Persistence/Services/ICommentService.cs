@@ -6,6 +6,7 @@
         Task<string> UpdateCommentAsync(CommentUpdateCommand commentUpdateCommand);
         Task<bool> DeleteCommentAsync(CommentDeleteCommand commentDeleteCommand);
         Task<CommentDetailResponse> GetCommentDetailAsync(string commentId);
-        
+        Task<ICollection<CommentSubCommentsListResposne>> GetPostCommentsAsync(string commentId);
+
     }
 }

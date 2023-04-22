@@ -6,5 +6,6 @@
         Task<string> UpdateSubCommentAsync(SubCommentUpdateCommand subCommentUpdateCommand);
         Task<bool> DeleteSubCommentAsync(SubCommentDeleteCommand subCommentDeleteCommand);
         Task<SubCommentDetailResponse> GetSubCommentDetailAsync(string subCommentId);
+
     }
 }

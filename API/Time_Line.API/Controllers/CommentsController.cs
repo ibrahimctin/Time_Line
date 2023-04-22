@@ -1,4 +1,5 @@
-﻿namespace Time_Line.API.Controllers
+﻿
+namespace Time_Line.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -40,5 +41,14 @@
             var response = await _mediator.Send(request);
             return Ok(response);
         }
+
+        [HttpGet("[action]")]
+        public async Task<ActionResult<GetCommentSubCommetsListQueryResponse>> GetCommentSubCommnents([FromQuery]string commentId)
+        {
+            var request = new GetCommentSubCommetsListQuery(commentId);
+            var response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
     }
 }

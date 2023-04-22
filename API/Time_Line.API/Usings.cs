@@ -34,5 +34,5 @@ global using Time_Line.Domain.Application.Features.Posts.Queries.GetPostComments
 global using Time_Line.Domain.Application.Features.SubComments.Commands.CreateSubComment;
 global using Time_Line.Domain.Application.Features.SubComments.Commands.DeleteSubComment;
 global using Time_Line.Domain.Application.Features.SubComments.Commands.UpdateSubComment;
-global using Time_Line.Domain.Application.Features.SubComments.Queries.GetSubCommentDetail;
-
+global using Time_Line.Domain.Application.Features.SubComments.Queries.GetSubCommentDetail; 
+global using Time_Line.Domain.Application.Features.Comments.Queries.GetCommentSubCommetsList;

@@ -6,4 +6,4 @@ global using Time_Line.Domain.Entities.DTOs.Posts.RequestDtos;
 global using System.ComponentModel.DataAnnotations;
 global using Time_Line.Domain.Entities.DTOs.Comment.ResponseDtos;
 global using Time_Line.Domain.Entities.DTOs.Posts.ResponseDtos;
-
+global using Time_Line.Domain.Entities.DTOs.SubComments.ResponseDtos;

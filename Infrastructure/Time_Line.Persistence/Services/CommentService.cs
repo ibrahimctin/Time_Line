@@ -66,6 +66,13 @@
             return true;
         }
         #endregion
+        public async Task<ICollection<CommentSubCommentsListResposne>> GetPostCommentsAsync(string commentId)
+        {
+            var commentSubCommentsResult = await _commentReadRepository.GetCommentSubCommentsAsync(commentId);
+            var commentSubCommentsPayload = _mapper.Map<ICollection<CommentSubCommentsListResposne>>(commentSubCommentsResult);
+            return commentSubCommentsPayload;
+
+        }
 
 
         #region My Private Methods
@@ -98,7 +105,8 @@
             return result;
         }
 
-       
+      
+
 
 
 

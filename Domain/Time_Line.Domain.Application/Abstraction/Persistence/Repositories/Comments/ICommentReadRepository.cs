@@ -2,5 +2,6 @@
 {
     public interface ICommentReadRepository:IReadRepository<Comment>
     {
+        Task<ICollection<Comment>> GetCommentSubCommentsAsync(string commentId);
     }
 }
