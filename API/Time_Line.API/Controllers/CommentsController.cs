@@ -43,7 +43,7 @@ namespace Time_Line.API.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<ActionResult<GetCommentSubCommetsListQueryResponse>> GetCommentSubCommnents([FromQuery]string commentId)
+        public async Task<ActionResult<GetCommentSubCommetsListQueryResponse>> GetCommentSubCommnents(string commentId)
         {
             var request = new GetCommentSubCommetsListQuery(commentId);
             var response = await _mediator.Send(request);

@@ -66,7 +66,7 @@
             return true;
         }
         #endregion
-        public async Task<ICollection<CommentSubCommentsListResposne>> GetPostCommentsAsync(string commentId)
+        public async Task<ICollection<CommentSubCommentsListResposne>> GetCommentSubCommentsAsync(string commentId)
         {
             var commentSubCommentsResult = await _commentReadRepository.GetCommentSubCommentsAsync(commentId);
             var commentSubCommentsPayload = _mapper.Map<ICollection<CommentSubCommentsListResposne>>(commentSubCommentsResult);

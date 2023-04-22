@@ -3,9 +3,20 @@
     public class GetCommentSubCommetsListQueryHandler
         : IQueryHandler<GetCommentSubCommetsListQuery, GetCommentSubCommetsListQueryResponse>
     {
-        public Task<GetCommentSubCommetsListQueryResponse> Handle(GetCommentSubCommetsListQuery request, CancellationToken cancellationToken)
+        private readonly ICommentService _commentService;
+
+        public GetCommentSubCommetsListQueryHandler(ICommentService commentService)
         {
-            throw new NotImplementedException();
+            _commentService = commentService;
+        }
+
+        public async Task<GetCommentSubCommetsListQueryResponse> Handle(GetCommentSubCommetsListQuery request, CancellationToken cancellationToken)
+        {
+            var commentSubCommentResult = await _commentService.GetCommentSubCommentsAsync(request.id);
+            return new GetCommentSubCommetsListQueryResponse
+            {
+                CommentSubCommentsListResposnes = commentSubCommentResult
+            };
         }
     }
 }
