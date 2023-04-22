@@ -11,9 +11,8 @@
             CreateMap<Post, PostUpdateRequest>()
                 .ReverseMap();
             CreateMap<Post, PostCommentListResponse>()
-                .ReverseMap()
-                .ForMember(src => src.Comments,
-                src => src.MapFrom(dest => dest.CommentDetailResponse));
+                .ForMember(src => src.CommentDetailResponse,
+                src => src.MapFrom(dest => dest.Comments));
         }
     }
 }

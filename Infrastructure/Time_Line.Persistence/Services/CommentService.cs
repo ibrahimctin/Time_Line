@@ -6,18 +6,20 @@
         private readonly ICommentReadRepository _commentReadRepository;
         private readonly ICommentWriteRepository _commentWriteRepository;
         private readonly ICurrentUserService _currUserService;
+        private readonly IPostReadRepository _postReadRepository;
 
         public CommentService(
             IMapper mapper,
             ICommentReadRepository commentReadRepository,
             ICommentWriteRepository commentWriteRepository,
-            ICurrentUserService currUserService
-            )
+            ICurrentUserService currUserService,
+            IPostReadRepository postReadRepository)
         {
             _mapper = mapper;
             _commentReadRepository = commentReadRepository;
             _commentWriteRepository = commentWriteRepository;
             _currUserService = currUserService;
+            _postReadRepository = postReadRepository;
         }
 
         #region CRUD Operations 
@@ -32,7 +34,7 @@
         public async Task<string> CreateCommentAsync(CommentCreateCommand commentCreateCommand)
         {
             var commentResult = _mapper.Map<Comment>(commentCreateCommand.CommentCreateRequest);
-            await GetPostIfPostExists(commentResult.Id);
+            await GetPostIfPostExists(commentResult.PostId);
             commentResult.User = await GetCurrUserAsync();
             await _commentWriteRepository.AddAsync(commentResult);
             await _commentWriteRepository.SaveAsync();
@@ -68,10 +70,12 @@
 
         #region My Private Methods
         private async Task<AppUser> GetCurrUserAsync() => await _currUserService.GetCurrentUser();
-        private async Task<Comment> GetPostIfPostExists(string id)
+        private async Task<Post> GetPostIfPostExists(string id)
         {
-            var result = await _commentReadRepository
-                .GetWhere(p => p.PostId == id)
+            var result = await _postReadRepository
+                .Table
+                .Where
+                (p => p.Id == id)
                 .FirstOrDefaultAsync();
 
 

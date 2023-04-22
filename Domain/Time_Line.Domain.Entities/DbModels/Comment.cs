@@ -8,5 +8,7 @@
         public Post? Post { get; set; }
         public string? UserId { get; set; }
         public AppUser? User { get; set; }
+        public ICollection<SubComment>? SubComments { get; set; }
+        public string? SubCommentId { get; set; }
     }
 }

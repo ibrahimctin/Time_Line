@@ -70,9 +70,9 @@
         }
         #endregion
 
-        public async Task<ICollection<PostCommentListResponse>> GetPostCommentsAsync(string commentId)
+        public async Task<ICollection<PostCommentListResponse>> GetPostCommentsAsync(string postId)
         {
-            var postCommentsResult = await _postReadRepository.GetPostCommentsAsync(commentId);
+            var postCommentsResult = await _postReadRepository.GetPostCommentsAsync(postId);
             var postCommentsPayload = _mapper.Map<ICollection<PostCommentListResponse>>(postCommentsResult);
             return postCommentsPayload;
         }

@@ -8,5 +8,7 @@
         public string? UserId { get; set; }
         public ICollection<Comment>? Comments { get; set; }
         public string?  CommentId { get; set; }
+        public ICollection<SubComment>? SubComments { get; set; }
+        public string?  SubCommentId { get; set; }
     }
 }

@@ -12,7 +12,10 @@
             services.AddScoped<IPostWriteRepository, PostWriteRepository>();
             services.AddScoped<ICommentWriteRepository, CommentWriteRepository>();
             services.AddScoped<ICommentReadRepository, CommentReadRepository>();
+            services.AddScoped<ISubCommentReadRepository,SubCommentReadRepository>();
+            services.AddScoped<ISubCommentWriteRepository, SubCommentWriteRepository>();
             services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<ISubCommentService, SubCommentService>();
             services.AddScoped<IPostService, PostService>();
             return services;
         }

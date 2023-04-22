@@ -33,10 +33,10 @@
             return Ok(response);
         }
 
-        [HttpGet("[action]/{id}")]
-        public async Task<ActionResult<GetPostCommnetsListQueryResponse>> GetPostComments(string commentId)
+        [HttpGet("[action]")]
+        public async Task<ActionResult<GetPostCommnetsListQueryResponse>> GetPostComments(string postId)
         {
-            var request = new GetPostCommnetsListQuery(commentId);
+            var request = new GetPostCommnetsListQuery(postId);
             var response = await _mediator.Send(request);
             return Ok(response);
         }

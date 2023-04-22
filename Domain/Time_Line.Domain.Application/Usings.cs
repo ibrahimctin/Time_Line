@@ -27,11 +27,10 @@ global using Time_Line.Domain.Application.Features.Comments.Commands.CreateComme
 global using Time_Line.Domain.Application.Features.Comments.Commands.DeleteComment;
 global using Time_Line.Domain.Application.Features.Comments.Commands.UpdateComment;
 global using Time_Line.Domain.Entities.DTOs.Comment.ResponseDtos;
-
-
-
-
-
-
+global using Time_Line.Domain.Entities.DTOs.SubComments.RequestDtos;
+global using Time_Line.Domain.Application.Features.SubComments.Commands.CreateSubComment;
+global using Time_Line.Domain.Application.Features.SubComments.Commands.UpdateSubComment;
+global using Time_Line.Domain.Application.Features.SubComments.Commands.DeleteSubComment;
+global using Time_Line.Domain.Entities.DTOs.SubComments.ResponseDtos;
 
 
